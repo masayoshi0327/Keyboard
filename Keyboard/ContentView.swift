@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            Text("てっく::ぴくにっく")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding()
+            Text("- 応募フォーム -")
+                .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
+            
+        }
     }
 }
 
