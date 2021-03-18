@@ -31,8 +31,11 @@ struct ContentView: View {
                 .font(.headline)
                 .padding()
             DataForm(title: "なまえ", placeholder: "てくてく たろう", form: $name)
+                .keyboardType(.default)
             DataForm(title: "メールアドレス", placeholder: "test@example.com", form: $email)
+                .keyboardType(.emailAddress)
             DataForm(title: "でんわばんごう", placeholder: "08012345678", form: $phone)
+                .keyboardType(.numberPad)
             Button(action: {
                 send = true
             }, label: {
