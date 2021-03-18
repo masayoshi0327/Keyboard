@@ -43,9 +43,10 @@ struct ContentView: View {
                     .font(.title)
                     .foregroundColor(.white)
                     .frame(width: 200, height: 75)
-                    .background(Color.green)
+                    .background(name == "" || email == "" || phone == "" ? Color.gray : Color.green)
                     .cornerRadius(10)
             })
+            .disabled(name == "" || email == "" || phone == "")
             .sheet(isPresented: $send) {
                 SendFinish()
             }
