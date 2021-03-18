@@ -33,9 +33,19 @@ struct ContentView: View {
             DataForm(title: "なまえ", placeholder: "てくてく たろう", form: $name)
             DataForm(title: "メールアドレス", placeholder: "test@example.com", form: $email)
             DataForm(title: "でんわばんごう", placeholder: "08012345678", form: $phone)
-            Button(action: {}, label: {
-                Text("Button")
+            Button(action: {
+                send = true
+            }, label: {
+                Text("送信する")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 75)
+                    .background(Color.green)
+                    .cornerRadius(10)
             })
+            .sheet(isPresented: $send) {
+                SendFinish()
+            }
         }
     }
 }
