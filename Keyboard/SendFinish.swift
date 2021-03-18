@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SendFinish: View {
     var body: some View {
-        Text("応募完了")
+        VStack{
+            Text("あなたの情報を盗みました。")
+                .font(.title)
+            Image("ハッカー")
+        }
     }
 }
 
